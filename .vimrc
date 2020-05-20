@@ -3,11 +3,23 @@ set hls
 set ic
 syntax on
 
+" - sign is the map leader
+let mapleader = "-"
+
+" used to put changes in this file into effect
+nnoremap <leader>sv :source $MYVIMRC<cr>
+
 " deals with window splitting
-nnoremap <F-h> <C-w>h
-nnoremap <C-j> <C-w>j
-"nnoremap <C-k> <C-w>k
-nnoremap <C-l> <C-w>l
+nnoremap <leader>h <C-w>h
+nnoremap <leader>j <C-w>j
+nnoremap <leader>k <C-w>k
+nnoremap <leader>l <C-w>l
+
+nnoremap <leader>H <C-w>H
+nnoremap <leader>J <C-w>J
+nnoremap <leader>K <C-w>K
+nnoremap <leader>L <C-w>L
+
 
 set splitbelow splitright
 
@@ -32,14 +44,9 @@ set ruler                           " show line and column number
 syntax on               " syntax highlighting
 set showcmd             " show (partial) command in status line
 " used to comment out lines of code (in bash and python)
-map <c-c> <esc>^i# €ýa
+map <leader>c <esc>^i# 
 " used to uncomment lines of code (in bash and python)
-map <c-u> <esc>^xx€ýa     
+map <leader>u <esc>^xx    
 "used to comment at the end of lines of code (in bash and python)
-map <c-a> <esc>A #   
+map <leader>a <esc>A #   
 "used to create a multiline comment
-
-imap <c-c> <esc>^i# 
-imap <c-u> <esc>^xxi
-imap <c-a> <esc>A #   i
-
