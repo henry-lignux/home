@@ -8,4 +8,3 @@ function mkcd() {
     cd $1
 }
 
-eval "$(thefuck --alias)"
